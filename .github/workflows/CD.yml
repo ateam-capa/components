@@ -38,6 +38,7 @@ jobs:
         run: npm install && git config --global user.email $EMAIL && git config --global user.name $NAME
 
       - name: 배포를 위한 준비를 시작합니다.
+        if: steps.check.outputs.changed == 'true'
         run: npm run build && npm run ready-publish
 
       - name: NPM 패키지 배포를 진행합니다.
