@@ -34,6 +34,9 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: npm install
 
+      - name: Build Storybook on Chromatic
+        run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
       - name: Git Config
         env:
           EMAIL: "david@capa.ai"
