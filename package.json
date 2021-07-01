@@ -1,12 +1,7 @@
 {
   "name": "@ateam-capa/components",
   "version": "0.1.1",
-  "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "styled-components": "^5.3.0",
-    "styled-reset": "^4.3.4"
-  },
+  "dependencies": {},
   "scripts": {
     "build": "rm -rf /dist && tsc && cp -R src/CustomizedComponent dist/ && cp -R src/CustomizedLayout dist/ && cp -R src/Provider dist/ && cp -R src/assets dist/ && cp -R README.md dist/",
     "ready-publish": "npm run build && cp -R package.json dist/",
@@ -43,6 +38,10 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "styled-components": "^5.3.0",
+    "styled-reset": "^4.3.4",
     "@storybook/addon-actions": "^6.3.2",
     "@storybook/addon-essentials": "^6.3.2",
     "@storybook/addon-links": "^6.3.2",
