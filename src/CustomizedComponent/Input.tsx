@@ -4,6 +4,8 @@ import {
   makeStyles,
   Box,
   OutlinedTextFieldProps,
+  FormControl,
+  FormHelperText,
 } from "@material-ui/core";
 import { colorSet } from "../Provider";
 
@@ -28,6 +30,13 @@ const useStyles = makeStyles((theme) => ({
       props.labelPlacement === "left" ? "center" : "space-between",
   }),
   root: (props: any) => ({
+    "& .MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense": {
+      backgroundColor: colorSet.gray000,
+    },
+    "& .MuiInputBase-input": {
+      backgroundColor: colorSet.gray000,
+      borderRadius: "4px",
+    },
     "& .MuiInputBase-root": {
       border: `1px solid ${colorSet.gray400}`,
       ...(props.size === "medium"
