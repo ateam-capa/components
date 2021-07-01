@@ -1,0 +1,50 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Check Version and Deploy
+
+on:
+  push:
+    branches: [release]
+  pull_request:
+    branches: [release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 버전 업데이트 여부를 확인합니다.
+        id : check
+        uses: EndBug/version-check@v2.0.1
+
+      - name: 패키지 배포를 위한 준비를 시작합니다.
+        env:
+          EMAIL: "david@capa.ai"
+          NAME: "Ateam-david" 
+        if: steps.check.outputs.changed == 'true'
+        run: npm install
+        run: git config --global user.email $EMAIL
+        run: git config --global user.name $NAME
+        run: npm run build
+        run: npm run ready-publish
+
+
+      - name: NPM 패키지 배포를 진행합니다.
+        if: steps.check.outputs.changed == 'true'
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./dist/package.json
