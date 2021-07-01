@@ -31,11 +31,15 @@ jobs:
         uses: EndBug/version-check@v2.0.1
 
       - name: NPM INSTALL
+        if: steps.check.outputs.changed == 'true'
+        run: npm install
+
+      - name: Git Config
         env:
           EMAIL: "david@capa.ai"
           NAME: "Ateam-david"
         if: steps.check.outputs.changed == 'true'
-        run: npm install && git config --global user.email $EMAIL && git config --global user.name $NAME
+        run: git config --global user.email $EMAIL && git config --global user.name $NAME
 
       - name: 배포를 위한 준비를 시작합니다.
         if: steps.check.outputs.changed == 'true'
