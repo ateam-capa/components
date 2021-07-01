@@ -91,3 +91,10 @@ onError.args = {
   ...Default.args,
   error: true,
 };
+
+export const onErrorWHelpertext = Template.bind({});
+onErrorWHelpertext.args = {
+  ...Default.args,
+  error: true,
+  helperText: "error!",
+};
