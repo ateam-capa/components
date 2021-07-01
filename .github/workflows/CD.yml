@@ -33,9 +33,11 @@ jobs:
         uses: EndBug/version-check@v2.0.1
 
       - name: NPM INSTALL
+        if: steps.check.outputs.changed == 'true'
         run: npm install
 
       - name: Publish to Chromatic
+        if: steps.check.outputs.changed == 'true'
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
