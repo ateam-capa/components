@@ -10,7 +10,7 @@
 
 - [NPM 바로가기](https://www.npmjs.com/package/@ateam-capa/components)
 
-- [StoryBook 바로가기](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/)
+- [StoryBook 바로가기](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/)
 
 <br>
 
@@ -43,7 +43,7 @@ const someComponent = () => {
 
 3. 컴포넌트 props
 
-[StoryBook](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/)에서 해당 컴포넌트 확인
+[StoryBook](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/)에서 해당 컴포넌트 확인
 
 <br>
 
@@ -91,30 +91,30 @@ const someComponent = () => {
 <hr>
 <br>
 
-컴포넌트의 자세한 사항은 [스토리북](https://www.chromatic.com/library?appId=60d2effc20d0c20039e7013a&groupPrefix=CAPA+DesignSystem)에서 확인할 수 있습니다.
+컴포넌트의 자세한 사항은 [스토리북](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/)에서 확인할 수 있습니다.
 
 ## 레이아웃
 
-- [GlobalNavigationBar](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-layout-globalnavigationbar--client)
-- [Container](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-layout-container--padding-y-32)
-- [Footer](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-layout-footer--default)
-- [Footer(Mobile)](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-layout-footermobile--default)
+- [GlobalNavigationBar](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-layout-globalnavigationbar--client)
+- [Container](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-layout-container--padding-y-32)
+- [Footer](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-layout-footer--default)
+- [Footer(Mobile)](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-layout-footermobile--default)
 
 <br>
 
 ## 컴포넌트
 
-- [Button](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-button--contained)
-- [Dialog](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-dialog--default)
-- [DialogAlert](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-dialogalert--default)
-- [Input](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-input--default)
-- [Label](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-label--default)
-- [Logo](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-logo--default)
-- [NavigationBanner](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-navigationbanner--info-banner)
-- [Notification](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-notification--default)
-- [Select](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-select--default)
-- [Tab](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-tab--default)
-- [Tooltip](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-tooltip--default)
-- [Typography](https://60dd31b0c7c2a700390099ff-ioviflsaob.chromatic.com/?path=/story/capa-designsystem-component-typography--default)
+- [Button](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-button--contained)
+- [Dialog](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-dialog--default)
+- [DialogAlert](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-dialogalert--default)
+- [Input](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-input--default)
+- [Label](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-label--default)
+- [Logo](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-logo--default)
+- [NavigationBanner](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-navigationbanner--info-banner)
+- [Notification](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-notification--default)
+- [Select](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-select--default)
+- [Tab](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-tab--default)
+- [Tooltip](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-tooltip--default)
+- [Typography](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-typography--default)
 
 <br>

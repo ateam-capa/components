@@ -53,7 +53,7 @@ jobs:
 
       - name: 배포를 위한 준비를 시작합니다.
         if: steps.check.outputs.changed == 'true'
-        run: npm run build && npm run ready-publish
+        run: npm run ready-publish
 
       - name: NPM 패키지 배포를 진행합니다.
         if: steps.check.outputs.changed == 'true'
