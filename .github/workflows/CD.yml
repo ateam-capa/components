@@ -27,20 +27,18 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: 버전 업데이트 여부를 확인합니다.
-        id : check
+        id: check
         uses: EndBug/version-check@v2.0.1
 
-      - name: 패키지 배포를 위한 준비를 시작합니다.
+      - name: NPM INSTALL
         env:
           EMAIL: "david@capa.ai"
-          NAME: "Ateam-david" 
+          NAME: "Ateam-david"
         if: steps.check.outputs.changed == 'true'
-        run: npm install
-        run: git config --global user.email $EMAIL
-        run: git config --global user.name $NAME
-        run: npm run build
-        run: npm run ready-publish
+        run: npm install && git config --global user.email $EMAIL && git config --global user.name $NAME
 
+      - name: 배포를 위한 준비를 시작합니다.
+        run: npm run build && npm run ready-publish
 
       - name: NPM 패키지 배포를 진행합니다.
         if: steps.check.outputs.changed == 'true'
