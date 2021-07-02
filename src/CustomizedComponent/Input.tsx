@@ -4,10 +4,9 @@ import {
   makeStyles,
   Box,
   OutlinedTextFieldProps,
-  FormControl,
-  FormHelperText,
 } from "@material-ui/core";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface CustomizedInputProps extends OutlinedTextFieldProps {
   labelPlacement?: "left" | "top";
@@ -55,7 +54,7 @@ const Input = (props: CustomizedInputProps) => {
   const size = props.size || "small";
   const classes = useStyles({ labelPlacement, size });
   return (
-    <Box className={classes.wrapper}>
+    <Box className={clsx(["capa-input", classes.wrapper])}>
       <Box className={classes.labelBox}>
         <Box>{props.inputLabel}</Box>
         {labelPlacement === "top" && <Box>{props.labelSubtext}</Box>}

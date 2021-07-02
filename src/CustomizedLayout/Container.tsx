@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, BoxProps, makeStyles } from "@material-ui/core";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface ContainerProps extends BoxProps {
   backgroundColor?: string;
@@ -20,7 +21,10 @@ const Container = (props: ContainerProps) => {
   });
 
   return (
-    <Box className={wrapper} {...props.wrapperStyle}>
+    <Box
+      {...props.wrapperStyle}
+      className={clsx(["capa-container", props.className, wrapper])}
+    >
       <Box className={container} {...props}>
         {props.children}
       </Box>

@@ -3,6 +3,7 @@ import {
   Typography as MaterialTypography,
   TypographyProps,
 } from "@material-ui/core";
+import clsx from "clsx";
 
 export interface Props extends TypographyProps {
   fontWeight?:
@@ -24,7 +25,11 @@ const Typography: React.FC<Props> = (props) => {
     { fontWeight: fontWeight, marginBottom: gutterBottoms, ...rest }
   );
   return (
-    <MaterialTypography {...rest} style={{ ...styled, ...rest.style }}>
+    <MaterialTypography
+      {...rest}
+      style={{ ...styled, ...rest.style }}
+      className={clsx(["capa-typography", props.className])}
+    >
       {props.children}
     </MaterialTypography>
   );

@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { Logo } from "../CustomizedComponent/index";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface GlobalNavigationBarProps {
   type: "partner" | "client";
@@ -16,6 +17,7 @@ export interface GlobalNavigationBarProps {
   tabs?: (React.ReactNode | string)[];
   onTabChange: (e: React.ChangeEvent<{}>, newValue: any) => void;
   banner?: React.ReactNode;
+  className?: string;
 }
 
 const GlobalNavigationBar = (props: GlobalNavigationBarProps) => {
@@ -36,7 +38,9 @@ const GlobalNavigationBar = (props: GlobalNavigationBarProps) => {
   };
 
   return (
-    <Box className={wrapper}>
+    <Box
+      className={clsx(["capa-globalNavigationBar", props.className, wrapper])}
+    >
       <Box className={container}>
         <Box className="left">
           {/* Logo Section */}
