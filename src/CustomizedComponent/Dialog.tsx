@@ -8,12 +8,14 @@ import {
   useTheme,
   useMediaQuery,
   IconButton,
+  DialogProps,
 } from "@material-ui/core";
 import { CloseOutlined } from "@material-ui/icons";
 import { Typography } from ".";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
-export interface CustomizedDialogProps {
+export interface CustomizedDialogProps extends DialogProps {
   open: boolean;
   onClose: () => void;
   iconBoxColor?: string;
@@ -22,17 +24,16 @@ export interface CustomizedDialogProps {
   mainText?: string;
   subText?: string;
   buttons?: React.ReactNode;
-  maxWidth?: number;
 }
 
 const Dialog = (props: CustomizedDialogProps) => {
-  const maxWidth = props.maxWidth || 600;
-  const classes = useStyles({ maxWidth });
+  const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <MaterialDialog
+      className={clsx(["capa-dialog", props.className])}
       open={props.open}
       onClose={props.onClose}
       classes={{ root: classes.root }}
@@ -76,12 +77,11 @@ const Dialog = (props: CustomizedDialogProps) => {
 export default Dialog;
 
 const useStyles = makeStyles((theme) => ({
-  root: (props: { maxWidth?: number }) => ({
+  root: {
     "& .MuiDialog-paper": {
       padding: 32,
       position: "relative",
       width: "calc(100% - 32px)",
-      maxWidth: props.maxWidth || 600,
       boxShadow:
         "0px 14px 56px 7px #0000001F, 0px 24px 56px 4px #00000024, 0px 24px 24px -6px #00000033",
       [theme.breakpoints.down("xs")]: {
@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
       marginTop: 48,
     },
-  }),
+  },
   subText: {
     color: colorSet.gray700,
     marginTop: 16,

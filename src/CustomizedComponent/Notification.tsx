@@ -4,6 +4,7 @@ import { ChevronRight } from "@material-ui/icons";
 import { colorSet } from "../Provider";
 import { Label, Typography } from ".";
 import { CustomizedLabelProps } from "./Lable";
+import clsx from "clsx";
 
 export interface NotificationProps {
   onClick?: () => void;
@@ -13,13 +14,14 @@ export interface NotificationProps {
   title?: string;
   detail?: React.ReactNode;
   subText?: string;
+  className?: string;
 }
 
 const Notification = (props: NotificationProps) => {
   const { wrapper, header, body, footer } = useStyles();
 
   return (
-    <Box className={wrapper} {...props.boxProps}>
+    <Box className={clsx(["capa-notification", wrapper])} {...props.boxProps}>
       <Box className={header}>
         <Label {...props.label} />
         <Typography variant="caption" color="textSecondary">

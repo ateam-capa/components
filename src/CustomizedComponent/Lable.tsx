@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "./Typography";
 import { Chip, ChipProps, makeStyles } from "@material-ui/core";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface CustomizedLabelProps extends ChipProps {
   shape?: "square" | "round";
@@ -15,8 +16,8 @@ const Label = (props: CustomizedLabelProps) => {
   const { root } = useStyles(props);
   return (
     <Chip
-      className={root}
       {...props}
+      className={clsx(["capa-label", root, props.className])}
       label={
         <Typography variant="caption" fontWeight={props.fontWeight || "700"}>
           {props.text}

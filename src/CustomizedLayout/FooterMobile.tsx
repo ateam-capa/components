@@ -4,12 +4,14 @@ import { Container } from ".";
 import { ContainerProps } from "./Container";
 import { Logo, Typography } from "../CustomizedComponent";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface FooterMobileProps extends ContainerProps {
   onClickLogo: () => void;
   onClickEmail: () => void;
   mainLinks: { title: string; onClick: () => void }[];
   subLinks: { title: string; onClick: () => void }[];
+  className?: string;
 }
 
 const FooterMobile = (props: FooterMobileProps) => {
@@ -17,6 +19,7 @@ const FooterMobile = (props: FooterMobileProps) => {
 
   return (
     <Container
+      className={clsx(["capa-footerMobile", props.className])}
       style={{ padding: "36px 24px" }}
       justifyContent="center"
       wrapperStyle={{
@@ -95,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subLinks: {
-    "& span": {
+    "& p": {
       "&:hover": {
         cursor: "pointer",
       },

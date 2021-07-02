@@ -5,8 +5,8 @@ import {
   TabsProps,
   makeStyles,
 } from "@material-ui/core";
-import { Typography } from ".";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface CustomizedTabProps extends TabsProps {
   tabs: (React.ReactNode | string)[];
@@ -21,7 +21,7 @@ const Tab = (props: CustomizedTabProps) => {
   return (
     <Tabs
       {...props}
-      className={`${props.className} ${container}`}
+      className={clsx(["capa-tab", props.className, container])}
       value={props.currentTab || 0}
       onChange={(e: React.ChangeEvent<{}>, newValue: any) => {
         props.setCurrentTab(newValue);

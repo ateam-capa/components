@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, makeStyles } from "@material-ui/core";
-import { Typography } from "./index";
-import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface NavigationBannerProps {
   backgroundColor: string;
@@ -9,6 +8,7 @@ export interface NavigationBannerProps {
   endIcon?: React.ReactNode;
   text: React.ReactNode;
   onClick?: () => void;
+  className?: string;
 }
 
 const NavigationBanner = ({
@@ -17,11 +17,15 @@ const NavigationBanner = ({
   endIcon,
   text,
   onClick,
+  className,
 }: NavigationBannerProps) => {
   const { container, textBox } = useStyles({ backgroundColor });
 
   return (
-    <Box className={container} onClick={onClick ? onClick : () => {}}>
+    <Box
+      className={clsx(["capa-navigationBanner", container])}
+      onClick={onClick ? onClick : () => {}}
+    >
       {startIcon && <Box className="startIconBox">{startIcon}</Box>}
 
       <Box className={textBox}>{text}</Box>

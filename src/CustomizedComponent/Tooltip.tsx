@@ -10,6 +10,7 @@ import {
 import Typography from "./Typography";
 import { colorSet } from "../Provider";
 import { CloseOutlined } from "@material-ui/icons";
+import clsx from "clsx";
 
 export interface CustomizedTooltipProps {
   color?: "gray" | "primary";
@@ -38,6 +39,7 @@ export interface CustomizedTooltipProps {
   zIndex?: number;
   useHover?: boolean;
   button?: React.ReactNode;
+  className?: string;
 }
 
 const Tooltip = ({
@@ -55,6 +57,7 @@ const Tooltip = ({
   useHover = false,
   onCloseButtonAction,
   button,
+  className,
 }: CustomizedTooltipProps) => {
   const [open, setOpen] = useState<boolean>(show_default);
   const {
@@ -74,7 +77,11 @@ const Tooltip = ({
   };
 
   const message = (
-    <Box display="flex" flexDirection="column">
+    <Box
+      display="flex"
+      flexDirection="column"
+      className={clsx(["capa-tooltip", className])}
+    >
       <Grid container direction="row">
         <Box>
           <Typography variant="body2" fontWeight="500" className={messageStyle}>

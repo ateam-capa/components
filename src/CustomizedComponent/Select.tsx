@@ -11,6 +11,7 @@ import {
   InputBaseComponentProps,
 } from "@material-ui/core";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface CustomizedSelectProps extends SelectProps {
   size?: "medium" | "small";
@@ -88,7 +89,7 @@ const Select = (props: CustomizedSelectProps) => {
     error: props.error || false,
   });
   return (
-    <Box className={classes.wrapper}>
+    <Box className={clsx(["capa-select", classes.wrapper, props.className])}>
       <Box className={classes.labelBox}>
         <Box>{props.inputLabel}</Box>
         {labelPlacement === "top" && <Box>{props.labelSubtext}</Box>}
@@ -98,7 +99,7 @@ const Select = (props: CustomizedSelectProps) => {
           <InputLabel disableAnimation>{props.placeholder}</InputLabel>
         )}
         <MaterialSelect
-          {...(props as SelectProps)}
+          {...(props as Omit<SelectProps, "className">)}
           classes={{ root: classes.root, select: classes.select }}
           MenuProps={{
             getContentAnchorEl: null,
