@@ -15,18 +15,21 @@ export interface LogoProps
 const Logo = (props: LogoProps) => {
   const selectedType = props.type === "partner" ? "Partner" : "Client";
   const selectedColor =
-    props.color === "primary"
-      ? "Primary"
+    props.color === "white"
+      ? "White"
       : props.color === "black"
       ? "Black"
-      : "White";
+      : "Primary";
   const selectedLogo =
     Logos[`${selectedType}${selectedColor}` as keyof typeof Logos] ||
     Logos.ClientPrimary;
 
   return (
     <img
-      {...props}
+      {...(props as React.DetailedHTMLProps<
+        React.ImgHTMLAttributes<HTMLImageElement>,
+        HTMLImageElement
+      >)}
       className={clsx(["capa-logo", props.className])}
       src={selectedLogo}
       alt={`${selectedType}${selectedColor}`}

@@ -106,7 +106,6 @@ const someComponent = () => {
 
 - [Button](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-button--contained)
 - [Dialog](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-dialog--default)
-- [DialogAlert](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-dialogalert--default)
 - [Input](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-input--default)
 - [Label](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-label--default)
 - [Logo](https://60dd57983e7bce003b03ce17-wgtzfxzulp.chromatic.com/?path=/story/capa-designsystem-component-logo--default)

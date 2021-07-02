@@ -25,7 +25,7 @@ const Container = (props: ContainerProps) => {
       {...props.wrapperStyle}
       className={clsx(["capa-container", props.className, wrapper])}
     >
-      <Box className={container} {...props}>
+      <Box {...props} className={container}>
         {props.children}
       </Box>
     </Box>
