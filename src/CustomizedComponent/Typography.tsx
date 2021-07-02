@@ -29,6 +29,7 @@ const Typography: React.FC<Props> = (props) => {
       {...rest}
       style={{ ...styled, ...rest.style }}
       className={clsx(["capa-typography", props.className])}
+      variantMapping={{ caption: "p" }}
     >
       {props.children}
     </MaterialTypography>

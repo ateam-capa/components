@@ -3,6 +3,7 @@ import { Box, makeStyles } from "@material-ui/core";
 import { Container } from ".";
 import { ContainerProps } from "./Container";
 import { Logo, Typography } from "../CustomizedComponent";
+import { Typography as MaterialTypo } from "@material-ui/core";
 import { colorSet } from "../Provider";
 import clsx from "clsx";
 
@@ -65,6 +66,8 @@ const Footer = (props: FooterProps) => {
         </Box>
       </Box>
 
+      <MaterialTypo variant="caption" />
+
       {/* lower */}
       <Box className={classes.lowerBox}>
         <Box display="flex" flexDirection="column">
@@ -96,7 +99,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   lowerBox: {
-    "& span": {
+    "& p": {
+      whiteSpace: "pre-wrap",
       "&:not(:last-child)": {
         marginBottom: 4,
       },
