@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subLinks: {
-    "& span": {
+    "& p": {
       "&:hover": {
         cursor: "pointer",
       },
