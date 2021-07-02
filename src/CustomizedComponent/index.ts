@@ -2,7 +2,6 @@ import Button from "./Button";
 import Input from "./Input";
 import Typography from "./Typography";
 import Dialog from "./Dialog";
-import DialogAlert from "./DialogAlert";
 import Tooltip from "./Tooltip";
 import Label from "./Lable";
 import Logo from "./Logo";
@@ -16,7 +15,6 @@ export {
   Input,
   Typography,
   Dialog,
-  DialogAlert,
   Tooltip,
   Label,
   Logo,

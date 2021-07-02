@@ -4,11 +4,13 @@ import { Container } from ".";
 import { ContainerProps } from "./Container";
 import { Logo, Typography } from "../CustomizedComponent";
 import { colorSet } from "../Provider";
+import clsx from "clsx";
 
 export interface FooterProps extends ContainerProps {
   onClickLogo?: () => void;
   onClickEmail?: () => void;
   links: { title: string; onClick: () => void }[];
+  className?: string;
 }
 
 const Footer = (props: FooterProps) => {
@@ -16,6 +18,7 @@ const Footer = (props: FooterProps) => {
 
   return (
     <Container
+      className={clsx(["capa-footer", props.className])}
       style={{ height: 422, marginBottom: 0 }}
       justifyContent="center"
       wrapperStyle={{

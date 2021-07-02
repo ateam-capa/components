@@ -1,7 +1,9 @@
 {
   "name": "@ateam-capa/components",
   "version": "0.1.4",
-  "dependencies": {},
+  "dependencies": {
+    "clsx": "^1.1.1"
+  },
   "scripts": {
     "build": "rm -rf /dist && tsc && cp -R src/CustomizedComponent dist/ && cp -R src/CustomizedLayout dist/ && cp -R src/Provider dist/ && cp -R src/assets dist/ && cp -R README.md dist/",
     "ready-publish": "npm run build && cp -R package.json dist/",

@@ -3,6 +3,7 @@ import { Button as MaterialButton } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { theme as globalTheme, colorSet } from "../Provider";
 import { MuiButtonProps, ICustomizedButtonProps } from "./types";
+import clsx from "clsx";
 
 const Button: React.FC<ICustomizedButtonProps> = (
   props: ICustomizedButtonProps
@@ -143,8 +144,8 @@ const Button: React.FC<ICustomizedButtonProps> = (
         color={colorProp}
         className={
           props.size === "medium"
-            ? props.className + " medium"
-            : props.className
+            ? clsx(["capa-button", props.className, "medium"])
+            : clsx(["capa-button", props.className])
         }
         disableElevation
       >
