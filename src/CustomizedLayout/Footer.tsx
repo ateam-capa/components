@@ -42,7 +42,7 @@ const Footer = (props: FooterProps) => {
               문의 사항은 우측 하단의 채널톡으로 주세요.
             </Typography>
             <Typography variant="body2" color="textSecondary">
-              {`평일 오전 10시 - 오후 6시
+              {`평일 오전 11시 - 오후 6시
                 (점심 시간 1시 - 2시 제외 • 주말/공휴일 제외)`}
             </Typography>
             <Typography onClick={props.onClickEmail} color="primary">
